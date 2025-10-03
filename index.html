@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Pro Calculator — CodeAlpha Task 2</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="app">
+    <aside class="history-panel" aria-label="Calculation history" id="historyPanel">
+      <h3>History</h3>
+      <ul id="historyList" class="history-list" aria-live="polite"></ul>
+      <button id="clearHistory" class="btn small">Clear History</button>
+    </aside>
+
+    <section class="calculator" role="application" aria-label="Calculator">
+      <header class="calc-header">
+        <div class="brand">🌟 Pro Calculator</div>
+        <div class="theme-toggle">
+          <button id="toggleTheme" aria-label="Toggle theme">🌙</button>
+        </div>
+      </header>
+
+      <div class="screen" id="screen" aria-live="polite" aria-atomic="true">
+        <div id="expression" class="expression">0</div>
+        <div id="result" class="result">0</div>
+      </div>
+
+      <div class="keys" role="group" aria-label="Calculator keys">
+        <!-- top row -->
+        <button class="btn fn" data-action="clear" aria-label="Clear">C</button>
+        <button class="btn fn" data-action="back" aria-label="Backspace">⌫</button>
+        <button class="btn fn" data-action="percent" aria-label="Percent">%</button>
+        <button class="btn op" data-value="/" aria-label="Divide">÷</button>
+
+        <!-- numbers + ops -->
+        <button class="btn num" data-value="7">7</button>
+        <button class="btn num" data-value="8">8</button>
+        <button class="btn num" data-value="9">9</button>
+        <button class="btn op" data-value="*" aria-label="Multiply">×</button>
+
+        <button class="btn num" data-value="4">4</button>
+        <button class="btn num" data-value="5">5</button>
+        <button class="btn num" data-value="6">6</button>
+        <button class="btn op" data-value="-" aria-label="Minus">−</button>
+
+        <button class="btn num" data-value="1">1</button>
+        <button class="btn num" data-value="2">2</button>
+        <button class="btn num" data-value="3">3</button>
+        <button class="btn op" data-value="+" aria-label="Plus">+</button>
+
+        <button class="btn fn" data-value="paren" data-action="(" aria-label="open parentheses">(</button>
+        <button class="btn num" data-value="0">0</button>
+        <button class="btn fn" data-value="." aria-label="Decimal">.</button>
+        <button class="btn equals" data-action="equals" aria-label="Equals">=</button>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
